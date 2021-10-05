@@ -1,0 +1,48 @@
+.profileInfo {
+    color: rgb(41, 66, 4);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 200px 200px;
+        grid-template-columns: 200px 200px;
+        grid-template-areas: "ava paragraph1" "ava paragraph2" "ava paragraph3" "ava paragraph4";
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+}
+
+.profileInfo__ava {
+    width: 100%;
+    align-self:center;
+    border-radius: 10%;
+    grid-row: 1;
+    /* grid-row-span: 4; */
+    grid-column: 1;
+    grid-area: ava;
+}
+
+/* .profileInfo__ava img {
+    width: 100px;
+} */
+
+.profileInfo__paragraph1 {
+    grid-row: 1;
+    grid-column: 2;
+    grid-area: paragraph1;
+}
+
+.profileInfo__paragraph2 {
+    grid-row: 2;
+    grid-column: 2;
+    grid-area: paragraph2;
+}
+
+.profileInfo__paragraph3 {
+    grid-row: 3;
+    grid-column: 2;
+    grid-area: paragraph3;
+}
+
+.profileInfo__paragraph4 {
+    grid-row: 4;
+    grid-column: 2;
+    grid-area: paragraph4;
+}

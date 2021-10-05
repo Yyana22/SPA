@@ -1,0 +1,36 @@
+.menu {
+  grid-area: menu;
+  background-color: #4d94ce;
+}
+
+.menu__links {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.menu__links__link {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+.menu__links__link:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+
+.menu__links li {
+  margin-bottom: 8px;
+}
+
+.menu__links li:last-child {
+  margin-top: 30px;
+}
+
+.activeLink {
+  color: #d8fd08;
+}
+
+.activeLink:hover {
+  text-shadow: 0px 0px 6px #d9ff00;
+}
+/*# sourceMappingURL=Sidebar.css.map */

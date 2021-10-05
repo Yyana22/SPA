@@ -1,0 +1,49 @@
+.item {
+  max-width: 500px;
+  color: rgb(41, 66, 4);
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  display: grid;
+  grid-template-areas: 'messages messages countLikes likes imgLikes';
+}
+
+.item img {
+  width: 50px;
+  margin-right: 0px 5px 10px 10px;
+  border-radius: 20px;
+}
+.messages {
+  grid-area: 'messages';
+  width: 200px;
+  padding-left: 15px;
+}
+
+.countLikes {
+  width: 100px;
+  grid-area: 'countLikes';
+}
+
+span {
+  color: rgb(241, 113, 113);
+  /* cursor: pointer; */
+  /* grid-area: 'likes'; */
+} 
+.imgLikes{
+  cursor: pointer;
+  width: 200px;
+  grid-area: 'imgLikes';
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img:hover {
+  width: 60px;
+  transition: 0.5s;
+}
+
+span:hover {
+  transition: 0.5s;
+  text-shadow: 0px 0px 6px rgb(245, 141, 141);
+}

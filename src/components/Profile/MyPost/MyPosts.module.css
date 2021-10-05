@@ -1,0 +1,10 @@
+.textarea textarea{
+    background-color: rgb(133,238 ,147);
+    border-radius: 10px;
+    outline: none;
+    color: #000;
+}
+
+.myPost__h3{
+    color: rgb(41, 66, 4);
+}
