@@ -1,3 +1,7 @@
+import dialogsReducer from "./dialogsReducer";
+import profileReducer from "./profileReducer";
+import sidebarReducer from "./sidebarReducer";
+
 let store = {
     _state: {
 
@@ -26,6 +30,7 @@ let store = {
                 { id: 4, name: "Sasha" },
                 { id: 5, name: "Viktor" },
             ],
+            newMessageBody: '',
         },
     
         sidebar: {
@@ -52,22 +57,14 @@ let store = {
         this._callSubscriber = observer; // паттерн
     },
 
-    dispatch(action){ // { typpe: 'ADD-POST' }
-        if(action.type === 'ADD-POST'){
-                let newPost = {
-                    id: 5,
-                    message: this._state.profilePage.newPostText,
-                    likesCount: 0,
-                }
-                this._state.profilePage.posts.push(newPost);
-                this._state.profilePage.newPostText = '';
-                this._callSubscriber(this._state);
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        }
+    dispatch(action){ // { type: 'ADD-POST' }
+
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+        this._state.sidebar = sidebarReducer(this._state.sidebar, action);
+        
+        this._callSubscriber(this._state);
     },
 }
-
 export default store;
 window.store = store; // удобно смотреть в консоли state

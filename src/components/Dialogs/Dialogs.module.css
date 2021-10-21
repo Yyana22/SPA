@@ -1,22 +1,25 @@
 .dialogs {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+.dialogsItems {
+  display: flex;
 }
 
-.dialogsItems a{
-    color: white;
-    text-decoration: none;
-    margin: 0;
-    padding: 10px;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
+.dialogsItems a {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .dialogsItem {
-    cursor: pointer;
+  cursor: pointer;
 }
-.dialogsItemActive{
-    font-weight: 300;
-    color: rgba(126, 252, 0, 0.733);
-    font-size: 20px;
+.dialogsItemActive {
+  font-weight: 300;
+  color: rgba(126, 252, 0, 0.733);
+  font-size: 20px;
 }
