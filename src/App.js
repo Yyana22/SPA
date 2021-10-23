@@ -25,9 +25,9 @@ const App = (props) => {
         <Switch>
         <Route path="/profile"
           component={() =>
-            <Profile store={props.store}/>
+            <Profile />
           } />
-        <Route path="/dialogs" component={() => <DialogsContainer store={props.store}/>} />
+        <Route path="/dialogs" component={() => <DialogsContainer />} />
         <Route path="/news" component={News} />
         <Route path="/music" component={Music} />
         <Route path="/settings" Render={Settings} />

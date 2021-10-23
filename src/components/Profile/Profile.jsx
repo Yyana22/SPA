@@ -8,9 +8,7 @@ const Profile = (props) => {
         <section >
             <div className={classes.profileWrapper} >
                 <ProfileInfo />
-                <MyPostsContainer
-                    store={props.store}
-                />
+                <MyPostsContainer/>
             </div>
         </section>
     )
