@@ -1,11 +1,11 @@
 .header {
-  grid-area: header;
-  background-color: #4d94ce;
-  padding: 10px;
+	grid-area: header;
+	background-color: #4d94ce;
+	padding: 10px;
 }
 
 .header img {
-  margin-left: 5px;
-  width: 45px;
+	margin-left: 5px;
+	width: 45px;
 }
 /*# sourceMappingURL=Header.css.map */

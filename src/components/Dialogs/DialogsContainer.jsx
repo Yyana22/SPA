@@ -3,22 +3,22 @@ import { sendMessageCreator, updateNewMessageBodyActoinCreator } from '../../red
 import Dialogs from './Dialogs';
 
 let mapStateToProps = (state) => {
-    return {
-        dialogsPage: state.dialogsPage,
-    }
+	return {
+		dialogsPage: state.dialogsPage,
+	}
 }
 
 let mapDispatchToProps = (dispatch) => {
-    return {
-        sendMessage: () => {
-            dispatch(sendMessageCreator());
-        },
-        updateNewMessageBody: (body) => {
-            dispatch(updateNewMessageBodyActoinCreator(body));
-        },
-    }
+	return {
+		sendMessage: () => {
+			dispatch(sendMessageCreator());
+		},
+		updateNewMessageBody: (body) => {
+			dispatch(updateNewMessageBodyActoinCreator(body));
+		},
+	}
 }
 
-const DialogsContainer = connect(mapStateToProps,mapDispatchToProps)(Dialogs);
+const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
 
 export default DialogsContainer;

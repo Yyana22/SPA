@@ -7,37 +7,37 @@ import Sidebar from './components/Sidebar/Sidebar';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
-import {BrowserRouter ,BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 
 
 const App = (props) => {
-  return (
-    <BrowserRouter>
-    <Router>
-    <div className="app-wrapper">
-      <Header />
-      <Sidebar />
-      <div className="app-wrapper-content">
-        <div>
-          <img src="https://pm1.narvii.com/6962/a5816f6da567392f2f0a13ef88b85c001cbfdbfar1-1000-200v2_hq.jpg" alt='img'></img>
-        </div>
-        <Switch>
-        <Route path="/profile"
-          component={() =>
-            <Profile />
-          } />
-        <Route path="/dialogs" component={() => <DialogsContainer />} />
-        <Route path="/news" component={News} />
-        <Route path="/music" component={Music} />
-        <Route path="/settings" Render={Settings} />
-        </Switch>
-      </div>
-      <Footer />
-    </div>
-    </Router>
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<Router>
+				<div className="app-wrapper">
+					<Header />
+					<Sidebar />
+					<div className="app-wrapper-content">
+						<div>
+							<img src="../img/sea.jpg" alt='img'></img>
+						</div>
+						<Switch>
+							<Route path="/profile"
+								component={() =>
+									<Profile />
+								} />
+							<Route path="/dialogs" component={() => <DialogsContainer />} />
+							<Route path="/news" component={News} />
+							<Route path="/music" component={Music} />
+							<Route path="/settings" Render={Settings} />
+						</Switch>
+					</div>
+					<Footer />
+				</div>
+			</Router>
+		</BrowserRouter>
+	);
 }
 
 export default App;
