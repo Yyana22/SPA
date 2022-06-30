@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import UsersContainer from './components/Users/UsersContainer';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header'
 import Profile from './components/Profile/Profile';
@@ -24,13 +25,20 @@ const App = (props) => {
 						</div>
 						<Switch>
 							<Route path="/profile"
-								component={() =>
+								render={() =>
 									<Profile />
 								} />
-							<Route path="/dialogs" component={() => <DialogsContainer />} />
-							<Route path="/news" component={News} />
-							<Route path="/music" component={Music} />
-							<Route path="/settings" Render={Settings} />
+							<Route path="/dialogs"
+								render={() =>
+									<DialogsContainer />
+								} />
+							<Route path="/users"
+								render={() =>
+									<UsersContainer />}
+							/>
+							<Route path="/news" render={News} />
+							<Route path="/music" render={Music} />
+							<Route path="/settings" render={Settings} />
 						</Switch>
 					</div>
 					<Footer />
